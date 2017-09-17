@@ -1,3 +1,6 @@
+"""
+Command-line Workbook - by Lezend
+"""
 import json
 from time import sleep
 from difflib import get_close_matches
