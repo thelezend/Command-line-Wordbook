@@ -11,7 +11,7 @@ def print_slow(output):
         time.sleep(0.02)
 
 def out(w):
-    print_slow(w.capitalize()+"\n")
+    print_slow(w+"\n")
     for i in range(len(data[w])):
         print_slow("%d. %s\n" %(i+1,data[w][i]))
 
@@ -35,6 +35,10 @@ def meaning(w):
     matches=get_close_matches(w,data.keys(),cutoff=0.8)
     if w in data.keys():
         out(w)
+    elif w.capitalize() in data.keys():
+        out(w.capitalize())
+    elif w.upper() in data.keys():
+        out(w.upper())
     elif len(matches) > 0:
         suggest(matches)
     else:
