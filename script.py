@@ -17,7 +17,7 @@ def out(w):
 
 def suggest(matches):
     if len(matches) > 0:
-        print_slow("Did you mean %s instead?(Y/N): "%matches[0].capitalize())
+        print_slow("Did you mean %s instead?(Y/N): "%matches[0]())
         yn=input().upper()
         if yn == "Y":
             out(matches[0])
